@@ -11,8 +11,8 @@ from dotenv import load_dotenv
 # ✅ .nikorihito から環境変数読み込み
 load_dotenv(dotenv_path=".nikorihito")
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY:", GEMINI_API_KEY)
-DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN:", DISCORD_BOT_TOKEN)
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY:")
+DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN:")
 
 # ✅ Gemini 設定
 genai.configure(api_key=GEMINI_API_KEY)

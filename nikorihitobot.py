@@ -8,6 +8,8 @@ from datetime import datetime, date
 import random
 from dotenv import load_dotenv
 
+load_dotenv()  # ← これがないと環境変数が読み込まれないニコリ！
+
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 
@@ -69,9 +71,9 @@ async def on_ready():
 
 # 🎂 誕生日
 @bot.tree.command(name="nikorihito_birthday", description="nikorihitoが誕生日を祝ってくれます")
-async def nikorihito_birthday(interaction: discord.Interaction):
+async def nikorihito_birthday(interaction: discord.Interaction, name: str):
     await interaction.response.send_message(
-        f"{interaction.user.mention}の誕生日を全力でお祝いするニコリ！！🎉🎂✨\n"
+        f"🎉🎂✨ {name} の誕生日を全力でお祝いするニコリ！！\n"
         "ケーキ🎂とビーフシチュー🍲を召し上がれニコリ！！\n"
         "🎵 [っていうことでゆったり系のバースデーソングで誕生日を限界までお祝いしよう！！](http://nikorihito.com/wp-content/uploads/2025/03/はっぴいばあすでいつーゆー.mp3)"
     )

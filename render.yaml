@@ -2,6 +2,6 @@ services:
   - type: web
     name: nikorihitobot
     env: python
-    buildCommand: ""
+    buildCommand: pip install -r requirements.txt
     startCommand: python nikorihitobot.py
     autoDeploy: false

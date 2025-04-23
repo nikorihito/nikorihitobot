@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: nikorihitobot
+    env: python
+    buildCommand: ""
+    startCommand: python nikorihitobot.py
+    autoDeploy: false

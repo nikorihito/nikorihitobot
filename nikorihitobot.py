@@ -446,10 +446,6 @@ async def mute_off(interaction: discord.Interaction):
     save_json(MUTE_FILE, mute_status)
     await interaction.response.send_message("いやっほ！しゃべれる、しゃべれるニコリ！！早速ビーフシチュー食べるぞー！！ニコリ！！ふぁー、お肉に味が染みてるーー！！😍😍ニコリ！！")
 
-# ✅ 起動！
-bot.run(DISCORD_BOT_TOKEN)
-
-
 # ✅ RenderでWebサービスとして動かすためのダミーサーバー（最後に追記！）
 app = Flask(__name__)
 
@@ -462,3 +458,6 @@ def run_web():
     app.run(host="0.0.0.0", port=port)
 
 threading.Thread(target=run_web).start()
+
+# ✅ 起動！
+bot.run(DISCORD_BOT_TOKEN)

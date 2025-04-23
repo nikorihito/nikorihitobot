@@ -1,4 +1,5 @@
 discord.py
-gTTS
 python-dotenv
+gTTS
 google-generativeai
+flask

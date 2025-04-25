@@ -8,7 +8,7 @@ import re
 from datetime import datetime
 import random
 from dotenv import load_dotenv  # type: ignore
-from gtts import gttS  # type: ignore
+from gtts import gtts  # type: ignore
 import threading
 from flask import Flask # type: ignore
 
